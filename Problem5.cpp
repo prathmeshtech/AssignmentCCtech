@@ -5,16 +5,26 @@ using namespace std;
 
 int main()
 {
-    string n;
-    cin>>n;
-    string res="";
+    string str, res="";
+    cout<<"Enter 5 digits number: ";
+    cin>>str;
+    // cout<<str;
 
-    for(int i=0; i<n.size(); i++){
-        res = res + n[i]
+    if(str.size() == 5){
+        cout<<"The number is: ";
+        for(int i=0; i<5; i++){
+            if(str[i] != '9')
+            {
+                int temp = (int(str[i]-'0'))+1;
+                cout<<temp;
+            }
+            else{
+                cout<<'0';
+            }
+        }
+    }else{
+        cout<<"Wrong Input";
     }
+
     return 0;
 };
-
-
-// N=123	Sum of digits=6
-// N=10123	Sum of digits=7

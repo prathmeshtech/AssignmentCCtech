@@ -16,10 +16,28 @@ int main()
         cin>>arr[i];
     }
 
-    for(int i=0; i<n-1; i++)
-    {
-        for(int j=i+1; j<n; j++)
+    int index = 0;
+    int min = arr[index];
+    
+    int maxindex = 0;
+    int max = arr[index];
+
+    for (int i = 1; i < n; i++){
+        if (arr[i] <= min){
+        min = arr[i];
+        index = i;
+        }
     }
+
+    for(int j=1; j<n; j++){
+        if(arr[j] > max){
+            max = arr[j];
+            maxindex = j;
+        }
+    }
+
+    cout<<"The Smallest Element is: "<<min<<" at the index "<< index+1 <<endl;
+    cout<<"The Biggest Element is: "<<max<<" at the index "<< maxindex+1 <<endl;
     
     return 0;
 };
