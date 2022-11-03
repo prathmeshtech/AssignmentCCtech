@@ -1,0 +1,1 @@
+// Write a program to accept a list of N integers. Accept integer K. Find the Kth smallest number in the list and its position.
